@@ -1,13 +1,13 @@
 {
-  "name": "electron-demo",
+  "name": "gk-electron-demo",
   "version": "1.0.0",
   "description": "Electron demo app for a school presentation",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "author": "Simon Schiller",
-  "license": "MIT",
+  "author": "Lahu Kamble",
+  "license": "Promaxsys",
   "devDependencies": {
     "electron": "^1.4.8"
   },

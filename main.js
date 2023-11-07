@@ -15,7 +15,22 @@ menuTemplate = [
         }
       }
     ]
+    
+  },
+  {
+    label: 'Input',
+    submenu: [
+      {
+        label: 'RMS Input',
+        click: () => {
+          openRMSInputWindow()
+        }
+      }
+    ]
+    
   }
+
+
 ]
 
 // Keep a global reference so the garbage collector does not destroy our app
@@ -65,6 +80,22 @@ function openAboutWindow() {
     aboutWindow.show()
   })
 }
+
+function openRMSInputWindow() {
+
+  rmsInput = new BrowserWindow({
+    parent: mainWindow,
+    width: 1280,
+    height: 720
+  })
+
+  rmsInput.loadURL(url.format({
+    pathname: path.join(__dirname, 'js/rmsInput.html'),
+    protocol: 'file:',
+    slashes: true
+  }))
+}
+
 
 // Create the window then the app is ready
 app.on('ready', () => {
